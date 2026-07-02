@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Github, Linkedin, Mail, MapPin, Sparkles, Cpu, Cloud, Rocket, GraduationCap, Briefcase, FolderKanban, Award, Users } from "lucide-react";
+import { useEffect, useState } from "react";
 import heroBg from "@/assets/hero-aero.jpg";
 import iconLeafChip from "@/assets/icon-leaf-chip.png";
 import iconDroplet from "@/assets/icon-droplet-cloud.png";
@@ -45,6 +46,33 @@ const skills = {
 };
 
 function Index() {
+  const sections = ["about", "projects", "experience", "skills"] as const;
+  const [active, setActive] = useState<string>("about");
+
+  useEffect(() => {
+    const els = sections
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => !!el);
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) setActive(e.target.id);
+        });
+      },
+      { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
+    );
+    els.forEach((el) => obs.observe(el));
+    return () => obs.disconnect();
+  }, []);
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+    history.replaceState(null, "", `#${id}`);
+  };
+
   return (
     <div className="min-h-screen relative overflow-x-hidden text-foreground">
       {/* Sky + hill hero background */}
@@ -62,12 +90,20 @@ function Index() {
             <span className="font-semibold text-aero-deep tracking-wide">Kenji Fahselt</span>
           </div>
           <ul className="hidden md:flex items-center gap-6 text-sm font-medium text-aero-deep/85">
-            <li><a href="#about" className="hover:text-aero-blue">About</a></li>
-            <li><a href="#projects" className="hover:text-aero-blue">Projects</a></li>
-            <li><a href="#experience" className="hover:text-aero-blue">Experience</a></li>
-            <li><a href="#skills" className="hover:text-aero-blue">Skills</a></li>
+            {sections.map((id) => (
+              <li key={id}>
+                <a
+                  href={`#${id}`}
+                  onClick={(e) => handleNavClick(e, id)}
+                  data-active={active === id}
+                  className="nav-link capitalize"
+                >
+                  {id}
+                </a>
+              </li>
+            ))}
           </ul>
-          <a href="mailto:kenjif3@uw.edu" className="aero-btn aero-btn-green text-sm">
+          <a href="#contact" onClick={(e) => handleNavClick(e, "contact")} className="aero-btn aero-btn-green text-sm">
             <Mail className="w-4 h-4" /> Contact
           </a>
         </nav>
@@ -104,7 +140,14 @@ function Index() {
 
           <div className="relative flex items-center justify-center">
             <div className="absolute inset-0 blur-3xl opacity-70" style={{ background: "radial-gradient(circle, rgba(155,224,58,0.55), transparent 65%)" }} />
-            <img src={iconLeafChip} alt="Leaf wrapping a microchip" width={420} height={420} className="relative animate-float drop-shadow-2xl" />
+            <div className="droplet-stage" role="img" aria-label="Animated glassy water droplets">
+              <div className="droplet droplet-1" />
+              <div className="droplet droplet-2" />
+              <div className="droplet droplet-3" />
+              <div className="droplet droplet-4" />
+              <div className="droplet droplet-5" />
+              <div className="droplet-ripple" />
+            </div>
           </div>
         </div>
       </section>
