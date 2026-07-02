@@ -303,7 +303,7 @@ function Index() {
       </section>
 
       {/* Contact CTA */}
-      <section className="mx-auto max-w-4xl px-4 pb-24">
+      <section id="contact" className="mx-auto max-w-4xl px-4 pb-24">
         <div className="glass-panel-dark p-10 text-center">
           <img src={iconDroplet} alt="" width={90} height={90} className="mx-auto mb-4 animate-float" loading="lazy" />
           <h2 className="text-3xl md:text-4xl font-semibold text-white drop-shadow">Let's build something optimistic.</h2>
