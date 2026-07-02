@@ -77,13 +77,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Kenji Fahselt — DX 2.0 & Agentic AI Consultant" },
+      { title: "Kenji Fahselt — Aspiring DX & Agentic AI Consultant" },
       { name: "description", content: "Portfolio of Kenji Fahselt: aspiring Digital Transformation consultant focused on agentic engineering, AI observability, and human-centric solutions." },
       { name: "author", content: "Kenji Fahselt" },
-      { property: "og:title", content: "Kenji Fahselt — DX 2.0 & Agentic AI Consultant" },
-      { property: "og:description", content: "Portfolio of Kenji Fahselt: agentic AI, AI observability, and human-centric digital transformation." },
+      { property: "og:title", content: "Kenji Fahselt — Aspiring DX & Agentic AI Consultant" },
+      { property: "og:description", content: "Portfolio of Kenji Fahselt: aspiring Digital Transformation consultant focused on agentic engineering, AI observability, and human-centric solutions." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Kenji Fahselt — Aspiring DX & Agentic AI Consultant" },
+      { name: "twitter:description", content: "Portfolio of Kenji Fahselt: aspiring Digital Transformation consultant focused on agentic engineering, AI observability, and human-centric solutions." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/24c632ec-35eb-405f-af06-551a48188598/id-preview-e1972946--64ed94bd-efa6-4c42-a791-15f07dca7ff5.lovable.app-1783028706949.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/24c632ec-35eb-405f-af06-551a48188598/id-preview-e1972946--64ed94bd-efa6-4c42-a791-15f07dca7ff5.lovable.app-1783028706949.png" },
     ],
     links: [
       {
