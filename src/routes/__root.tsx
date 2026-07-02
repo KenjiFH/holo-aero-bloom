@@ -77,14 +77,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Kenji Fahselt — DX 2.0 & Agentic AI Consultant" },
+      { name: "description", content: "Portfolio of Kenji Fahselt: aspiring Digital Transformation consultant focused on agentic engineering, AI observability, and human-centric solutions." },
+      { name: "author", content: "Kenji Fahselt" },
+      { property: "og:title", content: "Kenji Fahselt — DX 2.0 & Agentic AI Consultant" },
+      { property: "og:description", content: "Portfolio of Kenji Fahselt: agentic AI, AI observability, and human-centric digital transformation." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
