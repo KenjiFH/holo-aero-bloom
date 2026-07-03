@@ -79,8 +79,8 @@ html { scroll-behavior: smooth; }
   --gradient-sky: linear-gradient(180deg, #cfeeff 0%, #86c8f0 60%, #4ea3d8 100%);
   --gradient-lime: linear-gradient(180deg, #e3ff8a 0%, #9be03a 55%, #4ea014 100%);
   --gradient-glass: linear-gradient(180deg, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.35) 100%);
-  --gradient-button-blue: linear-gradient(180deg, #d6f0ff 0%, #74c1ee 45%, #2b7cc9 55%, #4aa0e0 100%);
-  --gradient-button-green: linear-gradient(180deg, #e6ff9c 0%, #9dd93e 45%, #3e9a17 55%, #79c62e 100%);
+  --gradient-button-blue: linear-gradient(180deg, #7fbde8 0%, #2f80c4 48%, #0f4f8a 56%, #1c6aac 100%);
+  --gradient-button-green: linear-gradient(180deg, #a8d967 0%, #4ea518 48%, #1f5d0a 56%, #3d8a12 100%);
   --gradient-aurora: radial-gradient(ellipse at 20% 10%, rgba(155,224,58,0.35), transparent 55%), radial-gradient(ellipse at 90% 30%, rgba(74,193,238,0.4), transparent 60%), radial-gradient(ellipse at 50% 100%, rgba(43,124,201,0.35), transparent 55%);
 
   --shadow-glass: 0 8px 32px rgba(31, 78, 145, 0.28), inset 0 1px 0 rgba(255,255,255,0.85), inset 0 -1px 0 rgba(255,255,255,0.25);
@@ -125,9 +125,9 @@ html { scroll-behavior: smooth; }
   border-radius: 999px;
   font-weight: 600;
   color: white;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.35);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6), 0 0 1px rgba(0,0,0,0.5);
   background: var(--gradient-button-blue);
-  border: 1px solid rgba(255,255,255,0.6);
+  border: 1px solid rgba(255,255,255,0.5);
   box-shadow: var(--shadow-button);
   position: relative;
   cursor: pointer;
@@ -143,9 +143,9 @@ html { scroll-behavior: smooth; }
 .aero-btn-green::after {
   content: "";
   position: absolute;
-  inset: 2px 2px 50% 2px;
+  inset: 2px 2px 60% 2px;
   border-radius: 999px 999px 60% 60% / 999px 999px 100% 100%;
-  background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0));
+  background: linear-gradient(180deg, rgba(255,255,255,0.45), rgba(255,255,255,0));
   pointer-events: none;
 }
 .aero-btn:hover, .aero-btn-green:hover { filter: brightness(1.08); transform: translateY(-1px); }
