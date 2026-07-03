@@ -80,7 +80,9 @@ function Index() {
         className="fixed inset-0 -z-10 bg-cover bg-center"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
-      <div className="fixed inset-0 -z-10 opacity-70" style={{ background: "var(--gradient-aurora)" }} />
+      <div className="fixed inset-0 -z-10 opacity-40" style={{ background: "var(--gradient-aurora)" }} />
+      {/* Soft white scrim to lift text contrast over the hero photo */}
+      <div className="fixed inset-0 -z-10 bg-white/25 pointer-events-none" aria-hidden />
 
       {/* Nav */}
       <header className="sticky top-4 z-50 mx-auto max-w-6xl px-4">
@@ -139,7 +141,7 @@ function Index() {
           </div>
 
           <div className="relative flex items-center justify-center">
-            <div className="absolute inset-0 blur-3xl opacity-70" style={{ background: "radial-gradient(circle, rgba(155,224,58,0.55), transparent 65%)" }} />
+            <div className="absolute inset-0 blur-3xl opacity-40" style={{ background: "radial-gradient(circle, rgba(155,224,58,0.4), transparent 65%)" }} aria-hidden />
             <div className="droplet-stage" role="img" aria-label="Animated glassy water droplets">
               <div className="droplet droplet-1" />
               <div className="droplet droplet-2" />
